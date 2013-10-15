@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+>
+	<LinearLayout
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_centerInParent="true" android:id="@+id/preloader_container"
+		android:gravity="center_vertical"
+	>
+		<ProgressBar
+			android:id="@+id/preloader"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"			
+		/>
+		<TextView 
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="@string/server_installing"
+		/>
+	</LinearLayout>
+	<RelativeLayout 
+		android:id="@+id/container" android:visibility="gone"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+	>
+		<LinearLayout		
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="vertical" android:padding="10dp"
+		>
+			<RelativeLayout 
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+			>
+				<TextView 
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:text="@string/server_interface"
+				/>
+				<TextView 
+					android:layout_width="80dp" android:layout_height="wrap_content"
+					android:text="@string/server_port" android:layout_alignParentRight="true"
+				/>
+			</RelativeLayout>
+			<RelativeLayout 
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+			>
+				<Spinner
+					android:id="@+id/server_interface" 
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:layout_toLeftOf="@+id/server_port"
+					android:layout_alignBottom="@+id/server_port"
+				/>					
+				<EditText 
+					android:id="@+id/server_port"
+					android:layout_width="80dp" android:layout_height="wrap_content"
+					android:layout_alignParentRight="true" 
+					android:imeOptions="actionDone"
+					android:inputType="number" android:digits="0123456789"
+					android:maxLength="5" android:singleLine="true"
+				/>			
+			</RelativeLayout>
+			<TextView 
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="@string/server_document_root"
+			/>
+			<RelativeLayout 
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+			>				
+				<EditText 
+					android:id="@+id/server_root"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:inputType="none" 
+					android:focusable="false" android:focusableInTouchMode="false"
+					android:layout_toLeftOf="@+id/server_start_on_boot"
+				/>
+				<CheckBox 
+					android:id="@+id/server_start_on_boot"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:text="@string/server_start_on_boot" 
+					android:layout_alignParentRight="true"
+				/>
+			</RelativeLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="vertical" android:padding="10dp"
+			android:layout_alignParentBottom="true"
+		>
+			<TextView 
+				android:id="@+id/error"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:gravity="center" android:textColor="#FF0000" 
+				android:maxLines="4" android:textSize="10sp"
+			/>
+			<TextView 
+				android:id="@+id/label"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:text="@string/server_status_updating" android:gravity="center"
+			/>
+			<Button 
+				android:id="@+id/start"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:text="@string/server_start" android:visibility="gone"
+			/>	
+			<Button 
+				android:id="@+id/stop"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:text="@string/server_stop" android:visibility="gone"
+			/>	
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>
