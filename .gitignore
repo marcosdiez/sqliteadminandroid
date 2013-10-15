@@ -1,3 +1,9 @@
+.hg
+.hgignore
+.hgtags
+.htaccess
+
+
 # built application files
 *.apk
 *.ap_
