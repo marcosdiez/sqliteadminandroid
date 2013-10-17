@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest 
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.marcosdiez.server.php" android:versionCode="5" android:versionName="1.0.4"
+	package="com.marcosdiez.server.php" android:versionCode="6" android:versionName="1.0.5"
 >
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -12,20 +12,20 @@
 		android:icon="@drawable/ic_launcher"
 		android:label="@string/title" android:allowBackup="false"
 	>
-		<receiver android:name="com.marcosdiez.server.php.service.AutoStart">
+		<receiver android:name=".service.AutoStart">
 			<intent-filter>
 				<action android:name="android.intent.action.BOOT_COMPLETED" />
 			</intent-filter>
 		</receiver>
-		<activity android:name="com.marcosdiez.server.php.MainActivity">
+		<activity android:name=".MainActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-		<activity 
-			android:name="net.rdrei.android.dirchooser.DirectoryChooserActivity"
-			android:theme="@android:style/Theme.Holo.Light"
-		/>
+		<!--<activity -->
+			<!--android:name="com.marcosdiez.dirchooser.DirectoryChooserActivity"-->
+			<!--android:theme="@android:style/Theme.Holo.Light"-->
+		<!--/>-->
 	</application>
 </manifest>
