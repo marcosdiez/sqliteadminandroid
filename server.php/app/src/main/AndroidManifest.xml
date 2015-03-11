@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.marcosdiez.server.php" android:versionCode="7" android:versionName="1.0.6"
+>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-sdk android:minSdkVersion="11" android:targetSdkVersion="17" />
+	<application
+		android:theme="@android:style/Theme.Holo.Light"
+		android:icon="@drawable/ic_launcher"
+		android:label="@string/title" android:allowBackup="false"
+	>
+		<receiver android:name=".service.AutoStart">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
+		<activity android:name=".MainActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<!--<activity -->
+			<!--android:name="com.marcosdiez.dirchooser.DirectoryChooserActivity"-->
+			<!--android:theme="@android:style/Theme.Holo.Light"-->
+		<!--/>-->
+	</application>
+</manifest>

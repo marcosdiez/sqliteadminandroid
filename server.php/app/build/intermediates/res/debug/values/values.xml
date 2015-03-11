@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Y:/home/ubuntu/code/server.php1/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="close">Close</string>
+    <string name="loading_text">Loading text…</string>
+    <string name="server_document_root">Document root</string>
+    <string name="server_installing">Installing server…</string>
+    <string name="server_interface">Server address</string>
+    <string name="server_port">Server port</string>
+    <string name="server_running">Server is running on %s</string>
+    <string name="server_start">Start server</string>
+    <string name="server_start_on_boot">Start server on boot</string>
+    <string name="server_status_updating">Updating server status…</string>
+    <string name="server_stop">Stop server</string>
+    <string name="server_stopped">Server is stopped</string>
+    <string name="title">SQLite Admin for Android</string>
+</resources>

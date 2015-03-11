@@ -1,0 +1,70 @@
+<title>SQLite Admin for Android</title>
+<pre>
+Welcome to SQLite Admin for Android
+
+<li>open <a href="phpliteAdmin/">phpliteAdmin</a> (password: <b>admin</b>)
+<li>open <a href="phpinfo.php">phpinfo()</a>
+
+This software allows developers to view/edit their SQLite databases
+inside of their phone/tablet without having to copy the DB to their computer
+(and later needing to copy them back to their phone).
+
+It installs on your phone a Web Based SQLite Admin tool in which you can open from your computer.
+
+Instructions
+============
+
+If you just want to see if this software works, download it, install on your phone,
+open it, start the server and go to "http://ip_address_of_your_phone:8080/" from your computer.
+If you have no internet, connect your phone with the USB cable and type "<i>adb forward tcp:8080 tcp:8080</i>".
+Afterwards, open <a href="http://localhost:8080/">http://localhost:8080/</a> from your computer.
+
+Now just create a database or play around with an existing one.
+
+To view/edit a database from an existing/your app:
+==================================================
+
+It is possible for you to view/edit a DB from an existing app, but you will need permissions for that.
+If you are rooted, just type:
+
+adb shell su -c chmod 777 /data/data/com.apkcreator.apkname/databases/ /data/data/com.apkcreator.apkname/databases/*
+
+hint: some apps make the DB not readable publicly every time they open, so be ready to type the command above many times.
+
+If you can't root, use your own app to make this folders and files public writtable.
+You may want to do this only on the debug version of your app.
+Afterwards, open SQLite Admin for Android, open the <i>sqliteDatabases.sqlite3</i> database and
+add either the absolute folder path or absolute database path in the <i>databases</i> database.
+
+If you wrote the path correctly AND there are permissions, the DB will automatically appear.
+Warning: errors will only be shown if you close SQLite Admin for Android and open it again.
+
+
+Bibliography
+============
+An alternative to this software would be <b><a href="http://market.android.com/search?q=com.peculiarcat.sqlbride">com.peculiarcat.sqlbride</a></b>, which takes a different approach.
+
+Just like everything else, this software could not be done without the help of many:
+
+<li><a href="http://php.net/" target="_blank">PHP</a>
+<li>Android <a href="http://market.android.com/search?q=pname:com.esminis.server.php" target="_blank">Server for PHP</a> (com.esminis.server.php)
+<li><a href="http://phpliteadmin.googlecode.com/" target="_blank">phpLite Admin</a> (original source code + some monkeypatch of mine)
+
+Trivia
+======
+<li> This software was written on a plane :)
+<li> This is actually a full blown single user PHP server on your phone. You can do whatever you want with it. Just check the <i>www</i> folder on your <i>sdcard</i>.
+
+
+License
+=======
+This software is open source, but there are so many softwares bundled in this package that I have no clue
+which licence may be legally used. If legal, BSD license is fine, else whatever is legal.
+
+About
+=====
+<a href="http://market.android.com/search?q=pname:com.marcosdiez.server.php">http://market.android.com/search?q=pname:com.marcosdiez.server.php</a>
+This software is open source and it's code is available on <a href="https://github.com/marcosdiez/sqliteadminandroid/" target="_blank">GitHub</a>
+
+Marcos Diez ( marcos AT unitron DOT com DOT br)
+2013-10-13
